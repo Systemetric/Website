@@ -2,27 +2,27 @@
 class Page {
 	private static $filePath;
 
-	public static function GET($key, $value = '') {
-		if(isset($_GET[$key])) {
-			if(!$value) {
+	public static function GET($key, $value = null) {
+		if($value === null) {
+			if(isset($_GET[$key])) {
 				return $_GET[$key];
 			} else {
-				$_GET[$key] = $value;
+				return null;
 			}
 		} else {
-			return null;
+			$_GET[$key] = $value;
 		}
 	}
 
-	public static function POST($key, $value = '') {
-		if(isset($_POST[$key])) {
-			if(!$value) {
+	public static function POST($key, $value = null) {
+		if($value === null) {
+			if(isset($_POST[$key])) {
 				return $_POST[$key];
 			} else {
-				$_POST[$key] = $value;
+				return null;
 			}
 		} else {
-			return null;
+			$_POST[$key] = $value;
 		}
 	}
 
