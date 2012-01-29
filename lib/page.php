@@ -48,7 +48,9 @@ class Page {
 	}
 
 	public static function addContent() {
-		require_once('pages/' . self::$filePath . '.php');
+		if(self::$filePath) {
+			require_once('pages/' . self::$filePath . '.php');
+		}
 	}
 
 	public static function filePath($extension = '') {
