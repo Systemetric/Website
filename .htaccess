@@ -1,0 +1,16 @@
+# Turn URL rewriting on
+RewriteEngine on
+
+Options +FollowSymlinks
+
+# Rewrite anything with an action (*/do/[whatever])
+RewriteRule ^([^/\.]+/?){0,4}/do/([^/\.]+)/?$ /do.php?action=$1 [L,NC,QSA]
+RewriteRule ^([^/\.]+/?){0,4}/do/([^/\.]+)/([^/\.]+)/?$ /do.php?action=$1&arg1=$2 [L,NC,QSA]
+RewriteRule ^([^/\.]+/?){0,4}/do/([^/\.]+)/([^/\.]+)/([^/\.]+)/?$ /do.php?action=$1&arg1=$2&arg2=$3 [L,NC,QSA]
+RewriteRule ^([^/\.]+/?){0,4}/do/([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)/?$ /do.php?action=$1&arg1=$2&arg2=$3&arg3=$4 [L,NC,QSA]
+
+# Rewrite pages, categories and subcategories
+RewriteRule ^([^/\.]+)/?$ /index.php?page=$1 [L,NC,QSA]		# /home/ -> /index.php?page=home
+RewriteRule ^([^/\.]+)/([^/\.]+)/?$ /index.php?page=$1&category=$2 [L,NC,QSA]		# /home/foo -> /index.php?page=home&category=foo
+RewriteRule ^([^/\.]+)/([^/\.]+)/([^/\.]+)/?$ /index.php?page=$1&category1=$2&subcategory=$3 [L,NC,QSA]		# /home/foo/bar -> /index.php?page=home&category=foo&subcategory=bar
+RewriteRule ^([^/\.]+)/([^/\.]+)/([^/\.]+)/([^/\.]+)/?$ /index.php?page=$1&category=$2&subcategory=$3&action=$4 [L,NC,QSA]		# /home/foo/bar/baz -> /index.php?page=home&category=foo&subcategory=bar&action=baz
