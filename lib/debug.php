@@ -17,7 +17,7 @@ class Debug {
 		}
 
 		// Write to log file
-		$fp = fopen(self::$c->folders->log . 'debug.log', 'a');
+		$fp = fopen('log/debug.log', 'a');
 		fwrite($fp,  date("d/m/y H:i:s") . $message . "\n");
 		fclose($fp);
 	}
