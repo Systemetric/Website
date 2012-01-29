@@ -1,7 +1,7 @@
 <?php
 // Handles all user auth and detail thingies
 class User {
-	private static $data, $loggedIn, $redditCookie;
+	private static $data, $loggedIn;
 
 	// Get some of the user's data, or update it if $value !== null
 	public static function data($key, $value = null) {
