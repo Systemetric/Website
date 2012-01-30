@@ -41,7 +41,7 @@ class Page {
 		} else if(file_exists('pages/' . self::GET('page') . '.php')) {
 			self::$filePath = self::GET('page');
 		} else {
-			Debug::msg('Page does not exist');
+			Debug::msg('Page does not exist: ' . print_r($_GET, true));
 
 			return false;
 		}
