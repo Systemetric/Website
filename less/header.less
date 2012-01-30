@@ -1,0 +1,86 @@
+#header {
+	color: #fff;
+	background: url('images/headerBackground.jpg');
+
+	div:first-child {
+		width: 1000px;
+		margin: 0 auto;
+	}
+
+	a.logo {
+		display: block;
+		float: left;
+		margin-top: 20px;
+		margin-left: 20px;
+	}
+
+	div.slogan {
+		text-align: right;
+		text-transform: uppercase;
+		font-size: 30px;
+		margin-top: 25px;
+		margin-right: 20px;
+		float: right;
+		font-family: 'Asap', sans-serif;
+		font-weight: bold;
+	}
+
+	div#nav {
+		position: absolute;
+		bottom: 0px;
+		background: #1e3273;
+		background: rgba(30, 50, 115, 0.5);
+		width: 1000px;
+
+		.roundedCorners(10px, 10px, 0px, 0px);
+		.insetBoxShadow(0px, 0px, 10px, rgba(0, 0, 0, 0.7));
+
+		a {
+			color: #fff;
+			text-decoration: none;
+			font-size: 16px;
+			padding: 10px;
+			width: 105px;
+			display: inline-block;
+			font-family: 'Asap', sans-serif;
+			text-align: left;
+
+			transition: all 0.1s ease-out;
+			-moz-transition: all 0.1s ease-out;
+
+			&:first-child {
+				.roundedCorners(10px, 0px, 0px, 0px);
+			}
+			&:last-child {
+				.roundedCorners(0px, 10px, 0px, 0px);
+			}
+
+			&:hover {
+				background: #fff;
+				color: #000;
+
+				.insetBoxShadow(0px, 0px, 7px, rgba(0, 0, 0, 0.7));
+				.textShadow(0px, 0px, 2px, #888);
+			}
+
+			&.current {
+				background: #fff;
+				color: #000;
+
+				&:hover {
+					box-shadow: none;
+					-moz-box-shadow: none;
+					-webkit-box-shadow: none;
+					-o-box-shadow: none;
+					-ms-box-shadow: none;
+
+					text-shadow: none;
+					-moz-text-shadow: none;
+					-webkit-text-shadow: none;
+					-o-text-shadow: none;
+					-ms-text-shadow: none;
+				}
+			}
+		}
+	}
+}
