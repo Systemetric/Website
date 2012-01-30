@@ -1,0 +1,121 @@
+@import url(http://fonts.googleapis.com/css?family=Asap:700);
+
+/* Global classes */
+.boxShadow(@hoffs: 0px, @voffs: 0px, @blurRadius: 5px, @col: #000) {
+	box-shadow: @hoffs @voffs @blurRadius @col;
+	-moz-box-shadow: @hoffs @voffs @blurRadius @col;
+	-webkit-box-shadow: @hoffs @voffs @blurRadius @col;
+	-o-box-shadow: @hoffs @voffs @blurRadius @col;
+	-ms-box-shadow: @hoffs @voffs @blurRadius @col;
+}
+.textShadow(@hoffs: 0px, @voffs: 0px, @blurRadius: 5px, @col: #000) {
+	text-shadow: @col @hoffs @voffs @blurRadius;
+	-moz-text-shadow: @col @hoffs @voffs @blurRadius;
+	-webkit-text-shadow: @col @hoffs @voffs @blurRadius;
+	-o-text-shadow: @col @hoffs @voffs @blurRadius;
+	-ms-text-shadow: @col @hoffs @voffs @blurRadius;
+}
+.insetBoxShadow(@xOffs: 0px, @yOffs: 0px, @radius: 5px, @col: #ccc)
+{
+	-moz-box-shadow: inset @xOffs @yOffs @radius @col;
+	-webkit-box-shadow:inset @xOffs @yOffs @radius @col;
+	box-shadow: inset @xOffs @yOffs @radius @col;
+	-ms-box-shadow:inset @xOffs @yOffs @radius @col;
+	-o-box-shadow: inset @xOffs @yOffs @radius @col;
+}
+.allRoundedCorners(@radius) {
+	border-radius: @radius @radius @radius @radius;
+	-webkit-border-radius: @radius @radius @radius @radius;
+	-moz-border-radius: @radius @radius @radius @radius;
+	-o-border-radius: @radius @radius @radius @radius;
+	-ms-border-radius: @radius @radius @radius @radius;
+}
+.roundedCorners(@r1, @r2, @r3, @r4) {
+	border-radius: @r1 @r2 @r3 @r4;
+	-webkit-border-radius: @r1 @r2 @r3 @r4;
+	-moz-border-radius: @r1 @r2 @r3 @r4;
+	-o-border-radius: @r1 @r2 @r3 @r4;
+	-ms-border-radius: @r1 @r2 @r3 @r4;
+}
+.verticalGradient(@top_col: #ccc, @bot_col: #aaa)
+{
+	//background: (@top_col + @bot_col) / 2;
+	background-image: -moz-linear-gradient(top, @top_col, @bot_col);
+	background-image: -webkit-gradient(linear,
+				left top, left bottom, from(@top_col), to(@bot_col));
+	background-image: -o-linear-gradient(top, @top_col, @bot_col);
+	background-image: -ms-linear-gradient(top, @top_col, @bot_col);
+}
+.noSelect {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+/* Sticky footer */
+@footerHeight: 150px;
+
+html, body {
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	background: #eee;
+}
+#wrap {
+	min-height: 100%;
+	margin: 0 auto;
+	background: #fff;
+	width: 1000px;		// 960px + (padding * 2)
+
+	.boxShadow (#888, 0px, 0px, 20px);
+}
+#main {
+	overflow: auto;
+	padding-bottom: @footerHeight;
+	height: 100%;
+}
+#footer {
+	position: relative;
+	margin-top: -@footerHeight;
+	height: @footerHeight;
+	clear: both;
+}
+#header {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	clear: both;
+	height: 170px;
+}
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;
+}
+
+/* Global styles */
+@pageWidth: 960px;
+
+html {
+	background: #f2f2f2;
+}
+
+// Center content but still allow backgrounds to span entire page
+div#footer div:first-child, div#main {
+	margin: 0 auto;
+	width: @pageWidth;
+	height: 100%;
+	padding: 0px 20px;
+}
+div#main {
+	padding-top: 150px;
+}
+
+@import url('./header.less');
+@import url('./footer.less');
