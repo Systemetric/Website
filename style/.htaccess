@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^(.+?)\.less$ parse.php?name=$1 [NC,L]

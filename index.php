@@ -7,13 +7,6 @@ if($conf->debug) {
 	@unlink('style.css');
 }
 
-// Compile LESS to CSS
-try {
-	lessc::ccompile('less/global.less', 'style.css');
-} catch (exception $ex) {
-	Debug::msg($ex->getMessage());
-}
-
 Page::setup();
 
 require_once('lib/html/header.php');
