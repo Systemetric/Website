@@ -46,6 +46,11 @@
 	background-image: -o-linear-gradient(top, @top_col, @bot_col);
 	background-image: -ms-linear-gradient(top, @top_col, @bot_col);
 }
+.transitions(@elements: all, @time: 0.5s, @easing: ease-out) {
+	transition: @elements @time, @easing;
+	-moz-transition: @elements @time @easing;
+	-webkit-transition: @elements @time @easing;
+}
 .noSelect {
 	-webkit-user-select: none;
 	-khtml-user-select: none;
