@@ -65,9 +65,9 @@
 		$files = glob('javascript/*.js');
 
 		// Loop through matched files and print `<script>` tags
-		foreach($files as $file) {
+		if(!empty($files))
+			foreach($files as $file)
 			echo '<script type="text/javascript" src="' . $file . '"></script>';
-		}
 		?>
 	</body>
 </html>
