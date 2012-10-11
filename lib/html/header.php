@@ -28,10 +28,10 @@
 							'blog' => 'Blog',
 							'about' => 'About Us',
 							'robots' => 'The Robots',
-							'photos' => 'Photos',
-							'resources' => 'Resources',
+							'media' => 'Media',
 							'getinvolved' => 'Get Involved',
-							'contact' => 'Contact Us'
+							'contact' => 'Contact Us',
+							'sponsors' => 'Sponsors'
 						);
 
 						foreach($buttons as $link => $text) {
@@ -48,12 +48,6 @@
 
 			<div id="main">
 				Main
-			</div>
-		</div>
-
-		<div id="footer">
-			<div>
-				Footer
 			</div>
 		</div>
 
