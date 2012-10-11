@@ -6,7 +6,7 @@ Page::setup();
 
 require_once('lib/html/header.php');
 
-//Page::addContent();
+Page::addContent();
 
 require_once('lib/html/footer.php');
 ?>
