@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Asap:700);
+@import url(http://fonts.googleapis.com/css?family=Asap:700|Titillium+Web|Droid+Sans);
 
 /* Global classes */
 .boxShadow(@hoffs: 0px, @voffs: 0px, @blurRadius: 5px, @col: #000) {
@@ -83,6 +83,36 @@ html, body {
 	overflow: auto;
 	padding-bottom: @footerHeight;
 	height: 100%;
+	.genericIntro{
+		height: 182px;
+		.carousel{
+			width:445px;
+			max-width:445px;
+			height:182px;
+			float:left;
+		}
+		.introduction{
+			float:right;
+			display:inline;
+			width:500px;
+			text-align:justify;
+		}
+	}
+
+	.layoutSplit{
+		display: inline-block;
+		width: 294px;
+		margin-right: 20px;
+		vertical-align: top;
+		*display: inline;
+		zoom: 1;
+	}
+	h1 {
+		font-family: 'Titillium Web';
+	}
+	.contentBox.half{
+		font-family: 'Droid Sans'
+	}
 }
 #footer {
 	position: relative;
