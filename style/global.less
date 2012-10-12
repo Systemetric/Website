@@ -83,42 +83,47 @@ html, body {
 	overflow: auto;
 	padding-bottom: @footerHeight;
 	height: 100%;
-	.genericIntro{
-		.carousel{
-			width:445px;
-			max-width:445px;
-			height:172px;
-			float:left;
-		}
-		.introduction{
-			float:right;
-			display:inline;
-			width:500px;
-			text-align:justify;
-			font: 15px 'DroidSans', Arial, Helvetica, sans-serif;
-			color: #444;
-			line-height: 1.4em;
-			margin-bottom: 15px;
-			text-align: justify;
-			margin-top: 0;
-		}
+	div#homepage{
+		@import url('./homepage.less');
 	}
-
-	.layoutSplit{
-		display: inline-block;
-		width: 294px;
-		margin-right: 20px;
-		vertical-align: top;
-		*display: inline;
-		zoom: 1;
-	}
-	h1 {
-		font-family: 'Titillium Web';
-		margin:0px;
-	}
-	.contentBox.half{
-		font-family: 'Droid Sans'
-	}
+	
+	//.genericIntro{
+	//	.carousel{
+	//		width:445px;
+	//		max-width:445px;
+	//		height:172px;
+	//		float:left;
+	//	}
+	//	.introduction{
+	//		float:right;
+	//		display:inline;
+	//		width:500px;
+	//		text-align:justify;
+	//		font: 15px 'DroidSans', Arial, Helvetica, sans-serif;
+	//		color: #444;
+	//		line-height: 1.4em;
+	//		margin-bottom: 15px;
+	//		text-align: justify;
+	//		margin-top: 0;
+	//	}
+	//}
+	//
+	//.layoutSplit{
+	//	display: inline-block;
+	//	width: 294px;
+	//	margin-right: 20px;
+	//	margin-top: 20px;
+	//	vertical-align: top;
+	//	*display: inline;
+	//	zoom: 1;
+	//}
+	//h1 {
+	//	font-family: 'Titillium Web';
+	//	margin:0px;
+	//}
+	//.contentBox.half{
+	//	font-family: 'Droid Sans'
+	//}
 }
 #footer {
 	position: relative;
