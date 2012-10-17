@@ -2,7 +2,12 @@
 <div id="homepage">
 	<div id="top">
 		<h1>Welcome to Systemetric - Team 759</h1>
-		<img src="/images/carousel.png" />
+			<?php
+				include_once("lib/carousel.php");
+				$carousel = new Carousel();
+				$carousel->addImagesFromFolder("images/carousel");
+				$carousel->printCarousel();
+			?>
 		<div id="introduction">
 		<p>Systemetric is a Robotics Team comprised of students aged 16-18 from Hills Road Sixth Form College in Cambridge, UK. We have been competing in the FIRST Robotics Competition since 2002, becoming the first British team to compete, and since then have competed every year at the competition regional in New York City. We also mentor FIRST Lego League teams in the East of England and often take part in other smaller robotics competitions.</p>
 		<p>
